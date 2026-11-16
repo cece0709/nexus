@@ -1,0 +1,14 @@
+// Additional system messages stay keyed by meaning rather than catalog position.
+const keys=['Android 本地日程通知','通知状态由系统权限决定。精确闹钟未获允许时，提醒可能延迟。','允许 Android 通知','系统通知已允许','精确提醒设置','未开启本地保存，后台提醒已暂停。','文件已保存。','保存已取消或失败。'];
+const rows:Record<string,string[]>={
+  en:['Android local reminders','Delivery depends on system permissions. Without exact alarm access, reminders may be delayed.','Allow Android notifications','System notifications allowed','Exact alarm settings','Local saving is off. Background reminders are paused.','File saved.','Saving was cancelled or failed.'],
+  'zh-Hant':['Android 本機日程通知','通知狀態由系統權限決定。未允許精確鬧鐘時，提醒可能延遲。','允許 Android 通知','系統通知已允許','精確提醒設定','未開啟本機儲存，背景提醒已暫停。','檔案已儲存。','儲存已取消或失敗。'],
+  vi:['Nhắc lịch cục bộ trên Android','Việc nhắc lịch phụ thuộc quyền hệ thống. Khi chưa cho phép báo thức chính xác, lời nhắc có thể bị trễ.','Cho phép thông báo Android','Đã cho phép thông báo hệ thống','Cài đặt báo thức chính xác','Đã tắt lưu cục bộ. Nhắc lịch nền đang tạm dừng.','Đã lưu tệp.','Đã hủy lưu hoặc lưu không thành công.'],
+  ja:['Androidのローカル予定通知','通知はシステムの権限に依存します。正確なアラームを許可していない場合、遅れることがあります。','Androidの通知を許可','システム通知は許可済み','正確なアラームの設定','ローカル保存がオフのため、バックグラウンド通知を停止しています。','ファイルを保存しました。','保存を中止したか、保存できませんでした。'],
+  ko:['Android 로컬 일정 알림','알림은 시스템 권한에 따라 달라집니다. 정확한 알람 권한이 없으면 알림이 늦어질 수 있습니다.','Android 알림 허용','시스템 알림 허용됨','정확한 알람 설정','로컬 저장이 꺼져 있어 백그라운드 알림을 일시 중지했습니다.','파일을 저장했습니다.','저장을 취소했거나 저장에 실패했습니다.'],
+  es:['Recordatorios locales de Android','La entrega depende de los permisos del sistema. Sin alarmas exactas, los avisos pueden retrasarse.','Permitir notificaciones de Android','Notificaciones del sistema permitidas','Configurar alarmas exactas','El guardado local está desactivado. Avisos en segundo plano en pausa.','Archivo guardado.','Se canceló el guardado o no pudo completarse.'],
+  ar:['تذكيرات Android المحلية','يعتمد التنبيه على أذونات النظام. قد يتأخر التذكير دون إذن المنبّه الدقيق.','السماح بإشعارات Android','إشعارات النظام مسموحة','إعدادات المنبّه الدقيق','الحفظ المحلي متوقف، وتذكيرات الخلفية معلّقة.','تم حفظ الملف.','أُلغي الحفظ أو تعذّر إتمامه.']
+};
+export const extraMessages:Record<string,Record<string,string>>=Object.fromEntries(Object.entries(rows).map(([language,values])=>[language,Object.fromEntries(keys.map((key,i)=>[key,values[i]]))]));
+const saveStatus: Record<string,string[]>={en:['File saved.','Save canceled or failed.'], 'zh-Hant':['檔案已儲存。','儲存已取消或失敗。'],vi:['Đã lưu tệp.','Đã hủy lưu hoặc lưu không thành công.'],ja:['ファイルを保存しました。','保存を中止したか、保存できませんでした。'],ko:['파일을 저장했습니다.','저장을 취소했거나 저장에 실패했습니다.'],es:['Archivo guardado.','Se canceló el guardado o no pudo completarse.'],ar:['تم حفظ الملف.','أُلغي الحفظ أو تعذّر إتمامه.']};
+for(const [language,values] of Object.entries(saveStatus)){extraMessages[language]??={};extraMessages[language]['文件已保存。']=values[0];extraMessages[language]['保存已取消或失败。']=values[1];}

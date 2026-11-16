@@ -1,0 +1,53 @@
+.nx-relationship-graph{position:relative;width:100%;height:100%;min-height:430px;overflow:hidden;background:radial-gradient(ellipse at 50% 46%,rgba(15,71,76,.14),transparent 54%),radial-gradient(ellipse at 50% 95%,rgba(23,83,91,.07),transparent 45%),#070f18;border-radius:inherit;color:#d7eeed;isolation:isolate}
+.nx-relationship-graph.is-compact{min-height:280px}
+.nx-graph-3d{position:absolute;inset:0}
+.nx-projected-labels{position:absolute;inset:0;pointer-events:none;z-index:3;overflow:hidden}
+.nx-projected-node{position:absolute;top:0;left:0;width:100px;height:78px;visibility:hidden;display:flex;flex-direction:column;align-items:center;pointer-events:auto;cursor:pointer;background:none;border:0;color:#b7d4d4;padding:0;will-change:transform}
+.nx-projected-initial{display:grid;place-items:center;flex:none;width:28px;height:28px;font-size:11px;line-height:1;color:#e4fff8;text-shadow:0 0 7px var(--node-color)}
+.nx-projected-node>.nx-node-label{margin-top:9px}
+.nx-projected-node.is-self .nx-projected-initial{font-size:18px}
+.nx-projected-node.is-self>.nx-node-label{margin-top:19px}
+.nx-projected-node.is-selected>.nx-node-label,.nx-projected-node:hover>.nx-node-label{color:var(--node-color)!important;background:#0c2530d9!important;border-color:#386c7155!important}
+.nx-projected-node:focus-visible{outline:none}.nx-projected-node:focus-visible>.nx-node-label{outline:2px solid var(--node-color);outline-offset:2px}
+.nx-relationship-graph canvas{outline:none;touch-action:none}
+.nx-graph-vignette{position:absolute;inset:0;pointer-events:none;z-index:1;background:linear-gradient(180deg,rgba(7,15,24,.14),transparent 18%,transparent 82%,rgba(7,15,24,.46)),radial-gradient(ellipse at center,transparent 50%,rgba(7,15,24,.32));border-radius:inherit}
+.nx-graph-status{position:absolute;left:24px;top:23px;z-index:2;display:flex;gap:9px;align-items:center;pointer-events:none}
+.nx-graph-status>span{width:6px;height:6px;box-shadow:0 0 12px #54e3cb;border-radius:100%;background:#54e3cb}
+.nx-graph-status>div{font-size:11px;color:#a3c3ca;letter-spacing:2px;line-height:1.4}
+.nx-graph-status small{display:block;color:#415d6e;font-size:7px;letter-spacing:1.3px;margin-top:4px}
+.nx-graph-count{position:absolute;right:24px;top:21px;z-index:2;display:flex;align-items:center;gap:9px;pointer-events:none}
+.nx-graph-count b{font-size:26px;font-weight:300;letter-spacing:-1px;color:#97c6c4;font-variant-numeric:tabular-nums}
+.nx-graph-count span{font-size:9px;color:#54717d;writing-mode:vertical-rl;letter-spacing:1px}
+.nx-node-initial{display:block;font-size:12px;line-height:1;font-weight:500;text-shadow:0 0 9px #4dcab3;white-space:nowrap;user-select:none}
+.nx-node-initial-self{font-size:18px;font-weight:400}
+.nx-node-label{appearance:none;border:1px solid transparent!important;background:transparent!important;color:#adc3cf!important;display:flex!important;flex-direction:column;align-items:center;gap:3px!important;cursor:pointer;padding:5px 10px!important;min-width:74px;white-space:nowrap;border-radius:8px;transition:background .2s,border-color .2s;line-height:1.2!important;box-shadow:none!important;user-select:none}
+.nx-node-label strong{font-family:inherit;font-size:11px;font-weight:500;letter-spacing:1px;color:inherit}
+.nx-node-label small{font-family:inherit;font-size:8px;font-weight:400;color:#577382;letter-spacing:.5px}
+.nx-node-label.is-selected{color:var(--node-color)!important;border-color:color-mix(in srgb,var(--node-color) 20%,transparent)!important;background:rgba(8,24,33,.85)!important;box-shadow:0 0 25px color-mix(in srgb,var(--node-color) 8%,transparent)!important}
+.nx-node-label.is-self strong{font-size:11px;color:#b0e8db;letter-spacing:2px}
+.nx-node-label.is-self small{font-size:6px;letter-spacing:1.7px;color:#44766f}
+.nx-node-label:focus-visible{outline:2px solid var(--node-color);outline-offset:2px}
+.nx-graph-legend{position:absolute;bottom:21px;left:24px;z-index:2;display:flex;flex-direction:column;gap:8px;pointer-events:none}
+.nx-graph-legend span{display:flex;gap:7px;align-items:center;font-size:8px;color:#577481;letter-spacing:.4px}
+.nx-graph-legend i{height:4px;width:4px;border-radius:50%;display:inline-block}
+.nx-legend-cyan{background:#61d7c5;box-shadow:0 0 8px #61d7c566}.nx-legend-amber{background:#c7a376;box-shadow:0 0 8px #c7a37633}
+.nx-graph-controls{position:absolute;bottom:23px;right:24px;z-index:30;display:flex;align-items:center;gap:3px;padding:4px;background:#0a1622e8;border:1px solid #1b2d3a;border-radius:9px;backdrop-filter:blur(12px)}
+.nx-graph-controls button{width:27px;height:27px;display:flex;align-items:center;justify-content:center;border:0;background:transparent;color:#668796;border-radius:5px;padding:0;cursor:pointer;transition:color .2s,background .2s}
+.nx-graph-controls button:hover{color:#96e3d6;background:#163136}.nx-graph-controls button:focus-visible{outline:2px solid #64dfcb;outline-offset:1px}
+.nx-graph-controls button:disabled{opacity:.35;cursor:default;background:transparent}
+.nx-graph-controls>span{height:14px;width:1px;background:#223440;margin:0 3px}
+.nx-graph-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);font-size:8px;color:#3b5a69;letter-spacing:1px;white-space:nowrap;pointer-events:none;z-index:2}
+.nx-graph-hint span{margin:0 8px;color:#29515b}
+.nx-flat-graph{position:absolute;inset:0;z-index:0}.nx-flat-graph svg{width:100%;height:100%;position:absolute;inset:0;pointer-events:none}
+.nx-flat-self,.nx-flat-person{position:absolute;transform:translate(-50%,-50%);background:transparent;border:0;color:#c7e1e0;padding:0;cursor:pointer;display:flex;align-items:center;flex-direction:column;font-family:inherit}
+.nx-flat-self{left:50%;top:50%;height:63px;width:63px;justify-content:center;border-radius:50%;border:1px solid #53dfc570;background:radial-gradient(circle,#19564f,#082b2b);box-shadow:0 0 0 10px #4fe0c50b,0 0 0 20px #4fe0c505,0 0 40px #4fe0c511;font-size:20px}
+.nx-flat-self span{position:absolute;top:75px;font-size:10px;white-space:nowrap;color:#78aba5}
+.nx-flat-person{gap:5px;z-index:1;min-width:65px}
+.nx-flat-person i{font-style:normal;width:30px;height:30px;border:1px solid color-mix(in srgb,var(--node-color) 50%,transparent);border-radius:50%;background:#0d222b;display:grid;place-items:center;color:var(--node-color);font-size:12px;box-shadow:0 0 16px color-mix(in srgb,var(--node-color) 10%,transparent)}
+.nx-flat-person strong{font-size:10px;font-weight:500;color:#a6c8cd}.nx-flat-person small{font-size:8px;color:#476f7b}
+.nx-flat-person.is-selected i{box-shadow:0 0 0 5px color-mix(in srgb,var(--node-color) 15%,transparent),0 0 20px color-mix(in srgb,var(--node-color) 25%,transparent)}
+.nx-flat-person:focus-visible,.nx-flat-self:focus-visible{outline:2px solid #60d3c5;outline-offset:6px}
+.nx-flat-notice{position:absolute;bottom:65px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:9px;color:#5a7e8d}
+.nx-relationship-graph:fullscreen{width:100vw;height:100vh;border-radius:0}
+@media(max-width:760px){.nx-relationship-graph{min-height:380px}.nx-graph-status{left:15px;top:17px}.nx-graph-count{right:15px;top:15px}.nx-graph-controls{right:12px;bottom:15px}.nx-graph-legend{left:15px;bottom:18px}.nx-graph-hint{display:none}.nx-node-label strong{font-size:10px}.nx-node-label small{font-size:7px}.nx-flat-notice{font-size:8px;bottom:61px}.nx-graph-count b{font-size:22px}.nx-graph-status small{font-size:6px}}
+@media(prefers-reduced-motion:reduce){.nx-relationship-graph *{transition:none!important}}
